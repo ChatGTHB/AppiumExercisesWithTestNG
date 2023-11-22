@@ -5,6 +5,9 @@ import io.appium.java_client.android.AndroidElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.Test;
 
+import java.net.MalformedURLException;
+import java.net.URL;
+
 public class C01_SetUpCapabilities {
 
     // Set-up Appium Environments
@@ -22,7 +25,7 @@ public class C01_SetUpCapabilities {
      */
 
     @Test
-    public void setUpCalculator() {
+    public void setUpCalculator() throws MalformedURLException {
 
         capabilities.setCapability("deviceName", "Pixel 7 API 33");
         capabilities.setCapability("platformName", "Android");
@@ -30,6 +33,8 @@ public class C01_SetUpCapabilities {
         capabilities.setCapability("automationName", "UiAutomator2");
         // Download an application from the apkPure
         // create a directory with name app under the project name then drag and drop the downloaded app
-        capabilities.setCapability("app", "");
+        capabilities.setCapability("app", System.getProperty("user.dir") + "/app/Calculator.apk");
+        // Set-up the driver and implement the URL
+        androidDriver=new AndroidDriver<AndroidElement>(new URL("http://127.0.0.1:4723"),capabilities);
     }
 }
