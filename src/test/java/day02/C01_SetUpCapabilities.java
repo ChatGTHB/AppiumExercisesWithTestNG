@@ -35,6 +35,6 @@ public class C01_SetUpCapabilities {
         // create a directory with name app under the project name then drag and drop the downloaded app
         capabilities.setCapability("app", System.getProperty("user.dir") + "/app/Calculator.apk");
         // Set-up the driver and implement the URL
-        androidDriver=new AndroidDriver<AndroidElement>(new URL("http://127.0.0.1:4723"),capabilities);
+        androidDriver = new AndroidDriver<AndroidElement>(new URL("http://127.0.0.1:4723"), capabilities);
     }
 }
