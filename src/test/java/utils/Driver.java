@@ -33,11 +33,11 @@ public class Driver {
             // When set to false, the application is reset at the beginning of each test and starts from the beginning.
             // It doesn't leave anything in memory, it clears it automatically.
         }
+
         if (ConfigReader.getProperty("platformName").equals("Android")) {
             assert appiumServerUrl != null;
             androidDriver = new AndroidDriver<AndroidElement>(appiumServerUrl, capabilities);
             androidDriver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
-
         } else {
             throw new UnsupportedOperationException("Invalid Platform Name");
         }

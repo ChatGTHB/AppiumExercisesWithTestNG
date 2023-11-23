@@ -15,7 +15,6 @@ public class C04_CreateDriverClass {
 
     @BeforeTest
     public void setUp() {
-
         driver.getAndroidDriver();
     }
 

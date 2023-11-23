@@ -14,10 +14,10 @@ public class ConfigReader {
             FileInputStream fileInputStream = new FileInputStream(filePath);
             properties = new Properties();
             properties.load(fileInputStream);
-        } catch (FileNotFoundException e) {
-            System.out.println("File Could'nt Be Found");
-        } catch (IOException e) {
-            System.out.println("File Could'nt be Load From Properties File");
+        } catch (FileNotFoundException exception) {
+            System.out.println("File couldn't be found");
+        } catch (IOException exception) {
+            System.out.println("File couldn't be load from properties file");
         }
     }
 
