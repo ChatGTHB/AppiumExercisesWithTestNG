@@ -22,8 +22,8 @@ public class C05_AndroidTestApk {
     }
     @Test
     public void tabOnThePointwithTouchAction() {
-        // TouchAction class i Selenium daki Action class ina benzer ozellikler tasir
-        // Note: aldigimiz point ler kullandigimiz device a gore degisiklik gosterebilir, bu konuda dikkatli olalim
+        // TouchAction class has similar features to Action class in Selenium.
+        // Note: The points we receive may vary depending on the device we use, let's be careful about this.
         TouchAction action = new TouchAction(driver.getAndroidDriver()) ;
         action.tap(point(86,207)).perform();
         reusableMethods.waitFor(3);
