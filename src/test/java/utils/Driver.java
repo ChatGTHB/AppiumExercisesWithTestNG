@@ -29,7 +29,7 @@ public class Driver {
             capabilities.setCapability("platformVersion", ConfigReader.getProperty("platformVersion"));
             capabilities.setCapability("automationName", ConfigReader.getProperty("automationName"));
             capabilities.setCapability("app", System.getProperty("user.dir") + ConfigReader.getProperty("app"));
-            capabilities.setCapability("noReset", false);
+            capabilities.setCapability("noReset", true);
             // When set to false, the application is reset at the beginning of each test and starts from the beginning.
             // It doesn't leave anything in memory, it clears it automatically.
         }
