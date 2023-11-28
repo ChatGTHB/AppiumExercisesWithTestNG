@@ -7,7 +7,6 @@ import java.util.Properties;
 
 public class ConfigReader {
     static Properties properties;
-
     static {
         try {
             String filePath = "configuration.properties";
@@ -20,7 +19,6 @@ public class ConfigReader {
             System.out.println("File couldn't be load from properties file");
         }
     }
-
     public static String getProperty(String key) {
         return properties.getProperty(key);
     }
