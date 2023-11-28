@@ -19,7 +19,7 @@ public class HooksWeb {
             capabilities.setCapability("platformName", ConfigReader.getProperty("platformName"));
             capabilities.setCapability("platformVersion", ConfigReader.getProperty("platformVersion"));
             capabilities.setCapability("automationName", ConfigReader.getProperty("automationName"));
-            capabilities.setCapability("browserName","safari");
+            capabilities.setCapability("browserName","chrome");
             androidDriver = new AndroidDriver<>(new URL("http://127.0.0.1:4723"), capabilities);
         } catch (MalformedURLException exception) {
             System.err.println("Malformed URL Exception: " + exception.getMessage());
