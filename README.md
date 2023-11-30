@@ -1,1 +1,1 @@
-# AppiumExercises
+# AppiumExercisesWithTestNG
