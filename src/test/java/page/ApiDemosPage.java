@@ -29,4 +29,6 @@ public class ApiDemosPage extends Hooks {
     public void clickElement(WebElement element) {
         element.click();
     }
+
+
 }

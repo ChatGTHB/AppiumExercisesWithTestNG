@@ -14,13 +14,11 @@ public class Driver {
     static DesiredCapabilities capabilities = new DesiredCapabilities();
 
     public static AndroidDriver getAndroidDriver() {
-
         URL appiumServerUrl = null;
-
         try {
             appiumServerUrl = new URL("http://127.0.0.1:4723");
-        } catch (MalformedURLException e) {
-            System.out.println(e.getMessage());
+        } catch (MalformedURLException exception) {
+            System.out.println(exception.getMessage());
         }
 
         if (androidDriver == null) {
@@ -33,7 +31,6 @@ public class Driver {
             // When set to false, the application is reset at the beginning of each test and starts from the beginning.
             // It doesn't leave anything in memory, it clears it automatically.
         }
-
         if (ConfigReader.getProperty("platformName").equals("Android")) {
             assert appiumServerUrl != null;
             androidDriver = new AndroidDriver<AndroidElement>(appiumServerUrl, capabilities);

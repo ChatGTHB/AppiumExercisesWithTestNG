@@ -9,10 +9,10 @@ import java.net.MalformedURLException;
 import java.net.URL;
 
 public class Hooks {
-
     // The Driver class gave an initialization error in Pages, so we created the Hooks Class.
     public static AndroidDriver<AndroidElement> androidDriver;
     static DesiredCapabilities capabilities = new DesiredCapabilities();
+
     @BeforeMethod
     public void setUp() {
 
@@ -25,6 +25,7 @@ public class Hooks {
             androidDriver = new AndroidDriver<>(new URL("http://127.0.0.1:4723"), capabilities);
         } catch (MalformedURLException exception) {
             System.err.println("Malformed URL Exception: " + exception.getMessage());
+
         }
     }
 }
